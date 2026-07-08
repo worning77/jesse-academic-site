@@ -281,16 +281,21 @@ export default function Home() {
                 University of China.
               </p>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                My research centers on human digitization: building real-time
-                systems that recover human pose and motion from the sparse
-                inertial sensors already embedded in phones, watches, earbuds,
-                and AR glasses. I work across on-device machine learning,
-                multi-sensor fusion, and XR systems to turn these signals into
-                full-body avatars and embodied input for spatial computing.
+                My research enables embodied AR interaction without cameras,
+                through minimum sufficient sensing: exploiting the always-on,
+                power-efficient, and privacy-preserving IMUs already embedded
+                in phones, watches, earbuds, and AR glasses. I build the
+                real-time, on-device sensing stack this requires — full-body
+                pose estimation from sparse consumer IMUs (MobilePoser),
+                kinematics-grounded inertial odometry for camera-free spatial
+                tracking (MARIO), and photorealistic full-body avatars on
+                consumer XR devices (FlowAvatar, with Google).
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Before moving into research, I trained and worked as a product
-                / UX designer — you can explore that side of my work in my{" "}
+                My path to research started in design. After training as a
+                designer and building shape-changing tangible interfaces at
+                AxLab, I now work in the opposite direction — making physical
+                movement digital. That earlier side of my work lives in my{" "}
                 <a
                   href="https://jessegao.online"
                   target="_blank"
