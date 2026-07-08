@@ -297,7 +297,7 @@ export default function Home() {
                 AxLab, I now work in the opposite direction — making physical
                 movement digital. That earlier side of my work lives in my{" "}
                 <a
-                  href="https://jessegao.online"
+                  href="https://design.jessegao.online"
                   target="_blank"
                   rel="noreferrer"
                   className="link-gray"
