@@ -1,0 +1,333 @@
+import Link from "next/link";
+
+const HIGHLIGHT_NAMES = ["Chenfeng Gao", "Chenfeng (Jesse) Gao"];
+
+type PubLink = { label: string; url: string };
+
+type Publication = {
+  title: string;
+  teaser: string;
+  authors: string[];
+  venue: string;
+  award?: string;
+  links: PubLink[];
+};
+
+const publications: Publication[] = [
+  {
+    title: "MARIO: Motion-Augmented Real-Time Multi-Sensor Inertial Odometry",
+    teaser: "/pubs/MARIO.png",
+    authors: [
+      "Yiquan Li",
+      "Taeyoung Yeon",
+      "Chenfeng Gao",
+      "Vasco Xu",
+      "Xuanyou Liu",
+      "Karan Ahuja",
+    ],
+    venue: "CVPR '26 Findings",
+    links: [{ label: "paper", url: "https://spice-lab.org/papers/MARIO.pdf" }],
+  },
+  {
+    title: "Shape-Kit: A Design Toolkit for Crafting On-Body Expressive Haptics",
+    teaser: "/pubs/ShapeKit.png",
+    authors: [
+      "Ran Zhou",
+      "Jianru Ding",
+      "Chenfeng (Jesse) Gao",
+      "Wanli (Michael) Qian",
+      "Benjamin Erickson",
+      "Madeline Balaam",
+      "Daniel Leithinger",
+      "Ken Nakagaki",
+    ],
+    venue: "CHI '25",
+    award: "Honorable Mention",
+    links: [
+      { label: "paper", url: "/papers/ShapeKit.pdf" },
+      { label: "video", url: "https://youtu.be/W_rZg8f6lZM" },
+      { label: "code", url: "https://github.com/AxLab-UofC/Shape-Kit" },
+      {
+        label: "project",
+        url: "https://www.axlab.cs.uchicago.edu/projects/shape-kit",
+      },
+    ],
+  },
+  {
+    title:
+      "SHAPE-IT: Exploring Text-to-Shape-Display for Generative Shape-Changing Behaviors with LLMs",
+    teaser: "/pubs/Shapeit.png",
+    authors: [
+      "Chenfeng (Jesse) Gao*",
+      "Wanli (Michael) Qian*",
+      "Anup Sathya",
+      "Ryo Suzuki",
+      "Ken Nakagaki",
+    ],
+    venue: "UIST '24",
+    links: [
+      { label: "paper", url: "/papers/Shapeit.pdf" },
+      { label: "video", url: "https://youtu.be/2NxzOBc7AdQ" },
+      { label: "code", url: "https://github.com/AxLab-UofC/SHAPE-IT" },
+      {
+        label: "project",
+        url: "https://www.axlab.cs.uchicago.edu/projects/shape-it",
+      },
+    ],
+  },
+  {
+    title:
+      "MobilePoser: Real-Time Full-Body Pose Estimation and 3D Human Translation from IMUs in Mobile Consumer Devices",
+    teaser: "/pubs/MobilePoser.png",
+    authors: ["Vasco Xu", "Chenfeng (Jesse) Gao", "Henry Hoffmann", "Karan Ahuja"],
+    venue: "UIST '24",
+    links: [
+      { label: "paper", url: "https://dl.acm.org/doi/10.1145/3654777.3676461" },
+      { label: "video", url: "https://www.youtube.com/watch?v=cN75eFHdCyE" },
+      { label: "code", url: "https://github.com/SPICExLAB/MobilePoser" },
+      {
+        label: "project",
+        url: "https://spice-lab.org/projects/MobilePoser/",
+      },
+    ],
+  },
+  {
+    title: "Towards Multimodal Interaction with AI-Infused Shape-Changing Interfaces",
+    teaser: "/pubs/Towards.png",
+    authors: [
+      "Chenfeng (Jesse) Gao*",
+      "Wanli (Michael) Qian*",
+      "Richard Liu",
+      "Rana Hanocka",
+      "Ken Nakagaki",
+    ],
+    venue: "UIST '24 Poster",
+    links: [
+      { label: "paper", url: "/papers/Towards.pdf" },
+      { label: "video", url: "https://youtu.be/ed5gHUzqIjg" },
+    ],
+  },
+  {
+    title:
+      "AeroRigUI: Actuated TUIs for Spatial Interaction using Rigging Swarm Robots on Ceilings in Everyday Space",
+    teaser: "/pubs/AeroRig.png",
+    authors: ["Chenfeng (Jesse) Gao*", "Lilith Yu*", "David Wu", "Ken Nakagaki"],
+    venue: "CHI '23",
+    links: [
+      { label: "paper", url: "/papers/AeroRig.pdf" },
+      { label: "code", url: "https://github.com/AxLab-UofC/CHI2023_AeroRigUI" },
+      {
+        label: "project",
+        url: "https://www.axlab.cs.uchicago.edu/projects/aerorigui",
+      },
+    ],
+  },
+  {
+    title:
+      "ShadowAstro: Levitating Constellation Silhouette for Spatial Exploration and Learning",
+    teaser: "/pubs/ShadowAstro.png",
+    authors: ["Chenfeng (Jesse) Gao*", "Jiatong Li*", "Ken Nakagaki"],
+    venue: "UIST '22 SIC",
+    award: "Jury Honorable Mention",
+    links: [
+      { label: "paper", url: "/papers/ShadowAstro.pdf" },
+      { label: "video", url: "https://youtu.be/9d8QrDRKCgg" },
+      {
+        label: "project",
+        url: "https://www.axlab.cs.uchicago.edu/projects/shadowastro",
+      },
+    ],
+  },
+];
+
+const heroLinks: PubLink[] = [
+  { label: "CV", url: "/docs/jesse-gao-cv.pdf" },
+  {
+    label: "SCHOLAR",
+    url: "https://scholar.google.com/citations?user=vdYgZ9MAAAAJ",
+  },
+  { label: "EMAIL", url: "mailto:chenfenggao2029@u.northwestern.edu" },
+  {
+    label: "LINKEDIN",
+    url: "https://www.linkedin.com/in/chenfeng-jesse-gao-a40229110/",
+  },
+];
+
+function Authors({ authors }: { authors: string[] }) {
+  return (
+    <div className="mt-2 text-gray-600 font-light">
+      {authors.map((author, i) => {
+        const isMe = HIGHLIGHT_NAMES.some((n) => author.startsWith(n));
+        return (
+          <span key={author}>
+            {isMe ? (
+              <span className="font-medium text-gray-900">{author}</span>
+            ) : (
+              author
+            )}
+            {i < authors.length - 1 && ", "}
+          </span>
+        );
+      })}
+    </div>
+  );
+}
+
+function BracketLink({ link, lowercase }: { link: PubLink; lowercase?: boolean }) {
+  return (
+    <a
+      href={link.url}
+      target={link.url.startsWith("mailto:") ? undefined : "_blank"}
+      rel="noreferrer"
+      className={`whitespace-nowrap text-red-600/80 font-semibold hover:text-red-600 hover:underline hover:underline-offset-8 hover:decoration-1 hover:decoration-red-600 ${
+        lowercase ? "text-sm" : ""
+      }`}
+    >
+      [&nbsp;{link.label}&nbsp;]
+    </a>
+  );
+}
+
+export default function Home() {
+  return (
+    <div className="flex-grow">
+      <nav className="bg-white">
+        <div className="mx-auto max-w-5xl mt-6 px-6">
+          <div className="relative flex h-16 items-center justify-between">
+            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-shrink-0 items-center">
+                <Link href="/" className="text-3xl font-bold">
+                  CHENFENG (JESSE) GAO
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        {/* Intro */}
+        <div className="container mx-auto max-w-5xl px-6 py-12">
+          <div className="flex flex-col items-center gap-12 md:flex-row">
+            <img
+              src="/images/me.png"
+              alt="Chenfeng (Jesse) Gao"
+              className="w-64 h-64 rounded-full object-cover flex-shrink-0"
+            />
+            <div className="flex-1">
+              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                I am a PhD student in Technology and Social Behavior at
+                Northwestern University, advised by{" "}
+                <a
+                  href="https://karan-ahuja.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link-gray"
+                >
+                  Prof. Karan Ahuja
+                </a>{" "}
+                in the{" "}
+                <a
+                  href="https://spice-lab.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link-gray"
+                >
+                  SPICE Lab
+                </a>
+                . Previously, I earned an M.S. in Computer Science at the
+                University of Chicago working with{" "}
+                <a
+                  href="https://www.axlab.cs.uchicago.edu/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link-gray"
+                >
+                  Prof. Ken Nakagaki
+                </a>{" "}
+                (AxLab), an M.Des. in Human-Computer Interaction from the IIT
+                Institute of Design, and a B.S. in Mathematics from Renmin
+                University of China.
+              </p>
+              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                My research interests lie at the intersection of wearable
+                sensing, XR interaction, and human digitization. I build
+                interactive systems that sense and model the human body to
+                enable richer connections between people, devices, and the
+                spaces around them.
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                Before moving into research, I trained and worked as a product
+                / UX designer — you can explore that side of my work in my{" "}
+                <a
+                  href="https://jessegao.online"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link-gray"
+                >
+                  design portfolio
+                </a>
+                .
+              </p>
+              <div className="flex flex-row flex-wrap items-center gap-4">
+                {heroLinks.map((link) => (
+                  <BracketLink key={link.label} link={link} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Publications */}
+        <div className="container mx-auto max-w-5xl px-6 py-8">
+          <div className="flex flex-col">
+            <div className="mb-4">
+              <h2 className="text-2xl font-bold">Selected Publications</h2>
+            </div>
+            <hr className="my-1 border-gray-200" />
+            <div className="bg-white overflow-hidden">
+              {publications.map((pub) => (
+                <div
+                  key={pub.title}
+                  className="flex flex-col md:flex-row md:items-center bg-white mt-8"
+                >
+                  <div className="md:w-1/3 mt-1">
+                    <img
+                      src={pub.teaser}
+                      alt={`${pub.title} teaser`}
+                      className="object-contain mx-auto max-h-44"
+                    />
+                  </div>
+                  <div className="md:w-2/3 md:pl-6">
+                    <h2 className="text-lg font-semibold text-gray-900 mt-4 md:mt-0">
+                      {pub.title}
+                    </h2>
+                    <Authors authors={pub.authors} />
+                    <div className="uppercase text-base mt-1 text-gray-600 font-bold">
+                      {pub.venue}
+                      {pub.award && (
+                        <span className="text-red-600/80 normal-case font-semibold">
+                          {" "}
+                          · {pub.award}
+                        </span>
+                      )}
+                    </div>
+                    <div className="mt-2 flex flex-row flex-wrap items-center gap-3">
+                      {pub.links.map((link) => (
+                        <BracketLink key={link.label} link={link} lowercase />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer className="container mx-auto max-w-5xl px-6 py-12 text-sm text-gray-400">
+        © {new Date().getFullYear()} Chenfeng (Jesse) Gao
+      </footer>
+    </div>
+  );
+}
