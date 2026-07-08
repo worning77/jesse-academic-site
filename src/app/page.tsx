@@ -43,6 +43,22 @@ const publications: Publication[] = [
     links: [],
   },
   {
+    title:
+      "ArmPoser: Real-Time, Calibration-Free Arm Pose Estimation from Smartwatch IMU",
+    teaser: "/pubs/ArmPoser.png",
+    authors: [
+      "Bishnu Dev",
+      "Vasco Xu",
+      "Xi-Aan Loh",
+      "Chenfeng Gao",
+      "Henry Hoffmann",
+      "Karan Ahuja",
+    ],
+    venue: "SUI '26",
+    comingSoon: true,
+    links: [],
+  },
+  {
     title: "MARIO: Motion-Augmented Real-Time Multi-Sensor Inertial Odometry",
     teaser: "/pubs/MARIO.png",
     authors: [
@@ -84,6 +100,23 @@ const publications: Publication[] = [
   },
   {
     title:
+      "MobilePoser: Real-Time Full-Body Pose Estimation and 3D Human Translation from IMUs in Mobile Consumer Devices",
+    teaser: "/pubs/MobilePoser.png",
+    teaserVideo: "/pubs/MobilePoser.mp4",
+    authors: ["Vasco Xu", "Chenfeng (Jesse) Gao", "Henry Hoffmann", "Karan Ahuja"],
+    venue: "UIST '24",
+    links: [
+      { label: "paper", url: "https://dl.acm.org/doi/10.1145/3654777.3676461" },
+      { label: "video", url: "https://www.youtube.com/watch?v=cN75eFHdCyE" },
+      { label: "code", url: "https://github.com/SPICExLAB/MobilePoser" },
+      {
+        label: "project",
+        url: "https://spice-lab.org/projects/MobilePoser/",
+      },
+    ],
+  },
+  {
+    title:
       "SHAPE-IT: Exploring Text-to-Shape-Display for Generative Shape-Changing Behaviors with LLMs",
     teaser: "/pubs/Shapeit.png",
     teaserVideo: "/pubs/Shapeit.mp4",
@@ -107,18 +140,18 @@ const publications: Publication[] = [
   },
   {
     title:
-      "MobilePoser: Real-Time Full-Body Pose Estimation and 3D Human Translation from IMUs in Mobile Consumer Devices",
-    teaser: "/pubs/MobilePoser.png",
-    teaserVideo: "/pubs/MobilePoser.mp4",
-    authors: ["Vasco Xu", "Chenfeng (Jesse) Gao", "Henry Hoffmann", "Karan Ahuja"],
-    venue: "UIST '24",
+      "AeroRigUI: Actuated TUIs for Spatial Interaction using Rigging Swarm Robots on Ceilings in Everyday Space",
+    teaser: "/pubs/AeroRig.png",
+    teaserVideo: "/pubs/AeroRig.mp4",
+    authors: ["Chenfeng (Jesse) Gao*", "Lilith Yu*", "David Wu", "Ken Nakagaki"],
+    venue: "CHI '23",
     links: [
-      { label: "paper", url: "https://dl.acm.org/doi/10.1145/3654777.3676461" },
-      { label: "video", url: "https://www.youtube.com/watch?v=cN75eFHdCyE" },
-      { label: "code", url: "https://github.com/SPICExLAB/MobilePoser" },
+      { label: "paper", url: "/papers/AeroRig.pdf" },
+      { label: "video", url: "https://www.youtube.com/watch?v=7hScViqkR84" },
+      { label: "code", url: "https://github.com/AxLab-UofC/CHI2023_AeroRigUI" },
       {
         label: "project",
-        url: "https://spice-lab.org/projects/MobilePoser/",
+        url: "https://www.axlab.cs.uchicago.edu/projects/aerorigui",
       },
     ],
   },
@@ -137,23 +170,6 @@ const publications: Publication[] = [
     links: [
       { label: "paper", url: "/papers/Towards.pdf" },
       { label: "video", url: "https://youtu.be/ed5gHUzqIjg" },
-    ],
-  },
-  {
-    title:
-      "AeroRigUI: Actuated TUIs for Spatial Interaction using Rigging Swarm Robots on Ceilings in Everyday Space",
-    teaser: "/pubs/AeroRig.png",
-    teaserVideo: "/pubs/AeroRig.mp4",
-    authors: ["Chenfeng (Jesse) Gao*", "Lilith Yu*", "David Wu", "Ken Nakagaki"],
-    venue: "CHI '23",
-    links: [
-      { label: "paper", url: "/papers/AeroRig.pdf" },
-      { label: "video", url: "https://www.youtube.com/watch?v=7hScViqkR84" },
-      { label: "code", url: "https://github.com/AxLab-UofC/CHI2023_AeroRigUI" },
-      {
-        label: "project",
-        url: "https://www.axlab.cs.uchicago.edu/projects/aerorigui",
-      },
     ],
   },
   {
