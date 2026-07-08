@@ -281,15 +281,15 @@ export default function Home() {
                 University of China.
               </p>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                My research enables embodied AR interaction without cameras,
-                through minimum sufficient sensing: exploiting the always-on,
-                power-efficient, and privacy-preserving IMUs already embedded
-                in phones, watches, earbuds, and AR glasses. I build the
-                real-time, on-device sensing stack this requires — full-body
-                pose estimation from sparse consumer IMUs (MobilePoser),
-                kinematics-grounded inertial odometry for camera-free spatial
-                tracking (MARIO), and photorealistic full-body avatars on
-                consumer XR devices (FlowAvatar, with Google).
+                My research follows two threads. The first builds real-time
+                machine learning systems for camera-lite AR, guided by the
+                idea of minimum sufficient sensing: recovering body pose,
+                motion, and spatial context on-device from the always-on,
+                power-efficient IMUs already embedded in phones, watches,
+                earbuds, and glasses. The second explores LLM-enabled novel
+                interactions — designing applications and end-to-end pipelines
+                that bring generative models into tangible, spatial, and
+                fabrication workflows.
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 My path to research started in design. After training as a
