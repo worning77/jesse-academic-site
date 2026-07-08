@@ -6,15 +6,40 @@ type PubLink = { label: string; url: string };
 
 type Publication = {
   title: string;
-  teaser: string;
+  teaser?: string;
   teaserVideo?: string;
   authors: string[];
-  venue: string;
+  venue?: string;
   award?: string;
+  comingSoon?: boolean;
   links: PubLink[];
 };
 
 const publications: Publication[] = [
+  {
+    title:
+      "FlowAvatar: Real-Time Full-Body Avatars from Sparse Egocentric Inputs on Consumer XR Devices",
+    teaser: "/pubs/FlowAvatar.png",
+    authors: [
+      "Chenfeng Gao",
+      "Taeyoung Yeon",
+      "Sungheon Park",
+      "Vasco Xu",
+      "Anish Prabhu",
+      "Mar Gonzalez-Franco",
+      "Karan Ahuja",
+    ],
+    venue: "ISMAR '26",
+    comingSoon: true,
+    links: [],
+  },
+  {
+    title:
+      "FabDreamer: Exploring the Image-to-Physical Workflow Through AI-Assisted Layered Fabrication",
+    authors: ["Chenfeng Gao", "Zeya Chen", "Anjie Yang", "Karan Ahuja", "Danli Luo"],
+    comingSoon: true,
+    links: [],
+  },
   {
     title: "MARIO: Motion-Augmented Real-Time Multi-Sensor Inertial Odometry",
     teaser: "/pubs/MARIO.png",
@@ -307,12 +332,16 @@ export default function Home() {
                         playsInline
                         className="object-contain mx-auto max-h-44"
                       />
-                    ) : (
+                    ) : pub.teaser ? (
                       <img
                         src={pub.teaser}
                         alt={`${pub.title} teaser`}
                         className="object-contain mx-auto max-h-44"
                       />
+                    ) : (
+                      <div className="mx-auto flex h-40 w-full items-center justify-center rounded-md bg-gray-100 text-sm text-gray-400">
+                        cover coming soon
+                      </div>
                     )}
                   </div>
                   <div className="md:w-2/3 md:pl-6">
@@ -326,6 +355,11 @@ export default function Home() {
                         <span className="text-[#8970A7] normal-case font-semibold">
                           {" "}
                           · {pub.award}
+                        </span>
+                      )}
+                      {pub.comingSoon && (
+                        <span className="normal-case font-semibold text-[#8970A7]">
+                          {pub.venue ? " · " : ""}Coming Soon
                         </span>
                       )}
                     </div>
