@@ -7,6 +7,7 @@ type PubLink = { label: string; url: string };
 type Publication = {
   title: string;
   teaser: string;
+  teaserVideo?: string;
   authors: string[];
   venue: string;
   award?: string;
@@ -31,6 +32,7 @@ const publications: Publication[] = [
   {
     title: "Shape-Kit: A Design Toolkit for Crafting On-Body Expressive Haptics",
     teaser: "/pubs/ShapeKit.png",
+    teaserVideo: "/pubs/ShapeKit.mp4",
     authors: [
       "Ran Zhou",
       "Jianru Ding",
@@ -57,6 +59,7 @@ const publications: Publication[] = [
     title:
       "SHAPE-IT: Exploring Text-to-Shape-Display for Generative Shape-Changing Behaviors with LLMs",
     teaser: "/pubs/Shapeit.png",
+    teaserVideo: "/pubs/Shapeit.mp4",
     authors: [
       "Chenfeng (Jesse) Gao*",
       "Wanli (Michael) Qian*",
@@ -79,6 +82,7 @@ const publications: Publication[] = [
     title:
       "MobilePoser: Real-Time Full-Body Pose Estimation and 3D Human Translation from IMUs in Mobile Consumer Devices",
     teaser: "/pubs/MobilePoser.png",
+    teaserVideo: "/pubs/MobilePoser.mp4",
     authors: ["Vasco Xu", "Chenfeng (Jesse) Gao", "Henry Hoffmann", "Karan Ahuja"],
     venue: "UIST '24",
     links: [
@@ -94,6 +98,7 @@ const publications: Publication[] = [
   {
     title: "Towards Multimodal Interaction with AI-Infused Shape-Changing Interfaces",
     teaser: "/pubs/Towards.png",
+    teaserVideo: "/pubs/Towards.mp4",
     authors: [
       "Chenfeng (Jesse) Gao*",
       "Wanli (Michael) Qian*",
@@ -111,10 +116,12 @@ const publications: Publication[] = [
     title:
       "AeroRigUI: Actuated TUIs for Spatial Interaction using Rigging Swarm Robots on Ceilings in Everyday Space",
     teaser: "/pubs/AeroRig.png",
+    teaserVideo: "/pubs/AeroRig.mp4",
     authors: ["Chenfeng (Jesse) Gao*", "Lilith Yu*", "David Wu", "Ken Nakagaki"],
     venue: "CHI '23",
     links: [
       { label: "paper", url: "/papers/AeroRig.pdf" },
+      { label: "video", url: "https://www.youtube.com/watch?v=7hScViqkR84" },
       { label: "code", url: "https://github.com/AxLab-UofC/CHI2023_AeroRigUI" },
       {
         label: "project",
@@ -126,6 +133,7 @@ const publications: Publication[] = [
     title:
       "ShadowAstro: Levitating Constellation Silhouette for Spatial Exploration and Learning",
     teaser: "/pubs/ShadowAstro.png",
+    teaserVideo: "/pubs/ShadowAstro.mp4",
     authors: ["Chenfeng (Jesse) Gao*", "Jiatong Li*", "Ken Nakagaki"],
     venue: "UIST '22 SIC",
     award: "Jury Honorable Mention",
@@ -142,10 +150,6 @@ const publications: Publication[] = [
 
 const heroLinks: PubLink[] = [
   { label: "CV", url: "/docs/jesse-gao-cv.pdf" },
-  {
-    label: "SCHOLAR",
-    url: "https://scholar.google.com/citations?user=vdYgZ9MAAAAJ",
-  },
   { label: "EMAIL", url: "mailto:chenfenggao2029@u.northwestern.edu" },
   {
     label: "LINKEDIN",
@@ -179,7 +183,7 @@ function BracketLink({ link, lowercase }: { link: PubLink; lowercase?: boolean }
       href={link.url}
       target={link.url.startsWith("mailto:") ? undefined : "_blank"}
       rel="noreferrer"
-      className={`whitespace-nowrap text-red-600/80 font-semibold hover:text-red-600 hover:underline hover:underline-offset-8 hover:decoration-1 hover:decoration-red-600 ${
+      className={`whitespace-nowrap text-[#8970A7] font-semibold hover:text-[#6f5a8c] hover:underline hover:underline-offset-8 hover:decoration-1 hover:decoration-[#6f5a8c] ${
         lowercase ? "text-sm" : ""
       }`}
     >
@@ -250,11 +254,12 @@ export default function Home() {
                 University of China.
               </p>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                My research interests lie at the intersection of wearable
-                sensing, XR interaction, and human digitization. I build
-                interactive systems that sense and model the human body to
-                enable richer connections between people, devices, and the
-                spaces around them.
+                My research centers on human digitization: building real-time
+                systems that recover human pose and motion from the sparse
+                inertial sensors already embedded in phones, watches, earbuds,
+                and AR glasses. I work across on-device machine learning,
+                multi-sensor fusion, and XR systems to turn these signals into
+                full-body avatars and embodied input for spatial computing.
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Before moving into research, I trained and worked as a product
@@ -292,11 +297,23 @@ export default function Home() {
                   className="flex flex-col md:flex-row md:items-center bg-white mt-8"
                 >
                   <div className="md:w-1/3 mt-1">
-                    <img
-                      src={pub.teaser}
-                      alt={`${pub.title} teaser`}
-                      className="object-contain mx-auto max-h-44"
-                    />
+                    {pub.teaserVideo ? (
+                      <video
+                        src={pub.teaserVideo}
+                        poster={pub.teaser}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="object-contain mx-auto max-h-44"
+                      />
+                    ) : (
+                      <img
+                        src={pub.teaser}
+                        alt={`${pub.title} teaser`}
+                        className="object-contain mx-auto max-h-44"
+                      />
+                    )}
                   </div>
                   <div className="md:w-2/3 md:pl-6">
                     <h2 className="text-lg font-semibold text-gray-900 mt-4 md:mt-0">
@@ -306,7 +323,7 @@ export default function Home() {
                     <div className="uppercase text-base mt-1 text-gray-600 font-bold">
                       {pub.venue}
                       {pub.award && (
-                        <span className="text-red-600/80 normal-case font-semibold">
+                        <span className="text-[#8970A7] normal-case font-semibold">
                           {" "}
                           · {pub.award}
                         </span>
