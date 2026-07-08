@@ -285,8 +285,8 @@ export default function Home() {
                 machine learning systems for camera-lite AR, guided by the
                 idea of minimum sufficient sensing: recovering body pose,
                 motion, and spatial context on-device from the always-on,
-                power-efficient IMUs already embedded in phones, watches,
-                earbuds, and glasses. The second explores LLM-enabled novel
+                power-efficient IMUs already embedded in consumer devices
+                (e.g., watch, glasses, phone). The second explores LLM-enabled novel
                 interactions — designing applications and end-to-end pipelines
                 that bring generative models into tangible, spatial, and
                 fabrication workflows.
