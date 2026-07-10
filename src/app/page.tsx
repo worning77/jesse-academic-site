@@ -280,38 +280,54 @@ export default function Home() {
                   rel="noreferrer"
                   className="link-gray"
                 >
-                  SPICE Lab
+                  Sensing, Perception, Interactive Computing and Experiences
+                  (SPICE) Lab
                 </a>
                 . Previously, I earned an M.S. in Computer Science at the
-                University of Chicago working with{" "}
+                University of Chicago, an M.Des. in Human-Computer Interaction
+                from the IIT Institute of Design, and a B.S. in Mathematics
+                from Renmin University of China. I am a recipient of the Red
+                Dot Design Award, a Best Paper Honorable Mention, and a Best
+                Demo Honorable Mention at ACM CHI 2025.
+              </p>
+              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                My research draws on my background in spatial AI, machine
+                learning and sensing, and interaction design to tackle
+                challenging research problems in high-impact application
+                areas: user digitization, context-aware AR experiences, and
+                creativity support tools. My work has been showcased through
+                invited technical demos at Qualcomm, Meta Reality Labs, and
+                Rivet, and covered by{" "}
                 <a
-                  href="https://www.axlab.cs.uchicago.edu/"
+                  href="https://www.newscientist.com/article/2372361-ceiling-robots-can-reconfigure-room-lights-and-curtains/"
                   target="_blank"
                   rel="noreferrer"
                   className="link-gray"
                 >
-                  Prof. Ken Nakagaki
-                </a>{" "}
-                (AxLab), an M.Des. in Human-Computer Interaction from the IIT
-                Institute of Design, and a B.S. in Mathematics from Renmin
-                University of China.
-              </p>
-              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                My research follows two threads. The first builds real-time
-                machine learning systems for camera-lite AR, guided by the
-                idea of minimum sufficient sensing: recovering body pose,
-                motion, and spatial context on-device from the always-on,
-                power-efficient IMUs already embedded in consumer devices
-                (e.g., watch, glasses, phone). The second explores LLM-enabled novel
-                interactions — designing applications and end-to-end pipelines
-                that bring generative models into tangible, spatial, and
-                fabrication workflows.
+                  <em>New Scientist</em>
+                </a>
+                ,{" "}
+                <a
+                  href="https://www.theengineer.co.uk/content/news/mobileposer-puts-motion-capture-into-mobile-devices"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link-gray"
+                >
+                  <em>The Engineer</em>
+                </a>
+                , and{" "}
+                <a
+                  href="https://www.mccormick.northwestern.edu/news/articles/2026/04/creative-agency-in-the-age-of-ai/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link-gray"
+                >
+                  <em>Northwestern Engineering News</em>
+                </a>
+                .
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                My path to research started in design. After training as a
-                designer and building shape-changing tangible interfaces at
-                AxLab, I now work in the opposite direction — making physical
-                movement digital. That earlier side of my work lives in my{" "}
+                That earlier side of my work lives in my{" "}
                 <a
                   href="https://design.jessegao.online"
                   target="_blank"
