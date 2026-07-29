@@ -20,6 +20,7 @@ const publications: Publication[] = [
     title:
       "FlowAvatar: Real-Time Full-Body Avatars from Sparse Egocentric Inputs on Consumer XR Devices",
     teaser: "/pubs/FlowAvatar.png",
+    teaserVideo: "/pubs/FlowAvatar.mp4",
     authors: [
       "Chenfeng Gao",
       "Taeyoung Yeon",
@@ -37,6 +38,7 @@ const publications: Publication[] = [
     title:
       "FabDreamer: Exploring the Image-to-Physical Workflow Through AI-Assisted Layered Fabrication",
     teaser: "/pubs/FabDreamer.png",
+    teaserVideo: "/pubs/FabDreamer.mp4",
     authors: ["Chenfeng Gao", "Zeya Chen", "Anjie Yang", "Karan Ahuja", "Danli Luo"],
     venue: "UIST '26",
     comingSoon: true,
