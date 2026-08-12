@@ -48,6 +48,7 @@ const publications: Publication[] = [
     title:
       "ArmPoser: Real-Time, Calibration-Free Arm Pose Estimation from Smartwatch IMU",
     teaser: "/pubs/ArmPoser.png",
+    teaserVideo: "/pubs/ArmPoser.mp4",
     authors: [
       "Bishnu Dev",
       "Vasco Xu",
