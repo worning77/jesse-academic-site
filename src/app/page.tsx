@@ -39,7 +39,7 @@ const publications: Publication[] = [
       "FabDreamer: Exploring the Image-to-Physical Workflow Through AI-Assisted Layered Fabrication",
     teaser: "/pubs/FabDreamer.png",
     teaserVideo: "/pubs/FabDreamer.mp4",
-    authors: ["Chenfeng Gao", "Zeya Chen", "Anjie Yang", "Karan Ahuja", "Danli Luo"],
+    authors: ["Chenfeng Gao*", "Zeya Chen*", "Anjie Yang", "Karan Ahuja", "Danli Luo"],
     venue: "UIST '26",
     comingSoon: true,
     links: [],
