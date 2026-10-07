@@ -22,8 +22,8 @@ const publications: Publication[] = [
     teaser: "/pubs/FlowAvatar.png",
     teaserVideo: "/pubs/FlowAvatar.mp4",
     authors: [
-      "Chenfeng Gao",
-      "Taeyoung Yeon",
+      "Chenfeng Gao*",
+      "Taeyoung Yeon*",
       "Sungheon Park",
       "Vasco Xu",
       "Anish Prabhu",
