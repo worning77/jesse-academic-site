@@ -31,8 +31,15 @@ const publications: Publication[] = [
       "Karan Ahuja",
     ],
     venue: "ISMAR '26",
-    comingSoon: true,
-    links: [],
+    links: [
+      { label: "paper", url: "https://arxiv.org/abs/2610.16277" },
+      { label: "video", url: "https://youtu.be/BReR50Vc9Vo" },
+      { label: "code", url: "https://github.com/SPICExLAB/FlowAvatar" },
+      {
+        label: "project",
+        url: "https://spice-lab.org/projects/FlowAvatar/",
+      },
+    ],
   },
   {
     title:
@@ -58,8 +65,14 @@ const publications: Publication[] = [
       "Karan Ahuja",
     ],
     venue: "SUI '26",
-    comingSoon: true,
-    links: [],
+    links: [
+      { label: "paper", url: "https://arxiv.org/abs/2609.08806" },
+      { label: "code", url: "https://github.com/SPICExLAB/ArmPoser" },
+      {
+        label: "project",
+        url: "https://spice-lab.org/projects/ArmPoser/",
+      },
+    ],
   },
   {
     title: "MARIO: Motion-Augmented Real-Time Multi-Sensor Inertial Odometry",
