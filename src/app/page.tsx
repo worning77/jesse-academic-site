@@ -296,24 +296,37 @@ export default function Home() {
                   rel="noreferrer"
                   className="link-gray"
                 >
-                  Sensing, Perception, Interactive Computing and Experiences
-                  (SPICE) Lab
+                  SPICE Lab
                 </a>
-                . Previously, I earned an M.S. in Computer Science at the
-                University of Chicago, an M.Des. in Human-Computer Interaction
-                from the IIT Institute of Design, and a B.S. in Mathematics
-                from Renmin University of China. I am a recipient of the Red
-                Dot Design Award, a Best Paper Honorable Mention, and a Best
-                Demo Honorable Mention at ACM CHI 2025.
+                . I build sensing and AI systems that let everyday wearables
+                understand how people move and where they are, without relying
+                on an always-on camera. My goal is to make AR glasses practical
+                enough to wear all day and to bring that technology out of the
+                lab and into the hands of real users. This work has been
+                recognized and supported by the{" "}
+                <a
+                  href="https://www.mccormick.northwestern.edu/news/articles/2026/11/chenfeng-gao-selected-for-the-2026-google-phd-fellowship-program/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link-gray"
+                >
+                  Google PhD Fellowship
+                </a>
+                .
               </p>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                My research draws on my background in spatial AI, machine
-                learning and sensing, and interaction design to tackle
-                challenging research problems in high-impact application
-                areas: user digitization, context-aware AR experiences, and
-                creativity support tools. My work has been showcased through
-                invited technical demos at Qualcomm, Meta Reality Labs, and
-                Rivet, and covered by{" "}
+                Previously, I earned an M.S. in Computer Science at the
+                University of Chicago, an M.Des. in Human-Computer Interaction
+                from the IIT Institute of Design, and a B.S. in Mathematics
+                from Renmin University of China. I am also a 2026–27 Design
+                Research Cluster Fellow, and my work has received the
+                Northwestern CS PhD Student Research Award, the Red Dot Design
+                Award, and Best Paper and Best Demo Honorable Mentions at ACM
+                CHI 2025.
+              </p>
+              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                My work has been showcased through invited technical demos at
+                Qualcomm, Meta Reality Labs, and Rivet, and covered by{" "}
                 <a
                   href="https://www.newscientist.com/article/2372361-ceiling-robots-can-reconfigure-room-lights-and-curtains/"
                   target="_blank"
