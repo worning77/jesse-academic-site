@@ -66,7 +66,7 @@ const publications: Publication[] = [
     ],
     venue: "SUI '26",
     links: [
-      { label: "paper", url: "https://arxiv.org/abs/2609.08806" },
+      { label: "paper", url: "https://dl.acm.org/doi/10.1145/3822518.3830068" },
       { label: "code", url: "https://github.com/SPICExLAB/ArmPoser" },
       {
         label: "project",
